@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insertBookQuery = "INSERT INTO books (title, author_id) VALUES ('$title', '$author_id')";
     if ($conn->query($insertBookQuery) === TRUE) {
         // Redirect kembali ke halaman utama setelah input
-        header("Location: index.php");
+        header("Location: index.html");
         exit();
     } else {
         echo "Error: " . $insertBookQuery . "<br>" . $conn->error;
